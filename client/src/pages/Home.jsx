@@ -27,7 +27,7 @@ export const Home = ({ username, setUsername, room, setRoom, socket }) => {
                     <option value="games">Games</option>
                 </select>
 
-                <button type='submit' onClick={joinRoom}>LOGIN</button>
+                <button type='submit'>LOGIN</button>
             </div>
         </div>
     )

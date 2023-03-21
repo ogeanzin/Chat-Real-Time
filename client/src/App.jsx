@@ -7,6 +7,9 @@ import Home from './pages/Home';
 import './App.css';
 
 const socket = io('http://localhost:3536')
+socket.on('connection', () => {
+  console.log('conectado')
+})
 
 function App() {
   const [username, setUsername] = useState('')
