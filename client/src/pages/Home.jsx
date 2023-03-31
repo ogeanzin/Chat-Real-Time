@@ -1,34 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import './Home.css'
 
-export const Home = ({ username, setUsername, room, setRoom, socket }) => {
+export const Home = () => {
     const navigate = useNavigate()
+    const [username, setUsername] = useState('')
 
-    function joinRoom() {
-        if (username !== '' && room !== '') {
-            socket.emit('join_room', { username, room })
-        }
-
-        navigate('/chat', { replace: true })
+    const joinRoom = (e) => {
+        e.preventDefault();
+        localStorage.setItem('username', username);
+        navigate('/chat');
     }
 
     return (
         <div className="home-container">
-            <div className="login-wrapper">
-                <h1>Login Chat</h1>
-
-                <input className='input' type="text" placeholder='Username' required onChange={(e) => setUsername(e.target.value)}/>
-
-                <select className='input' onChange={(e) => setRoom(e.target.value)}>
-                    <option>Select Room</option>
-                    <option value="sports">Sports</option>
-                    <option value="games">Games</option>
-                </select>
-
-                <button type='submit'>LOGIN</button>
-            </div>
+            <form action="" className='form' onSubmit={joinRoom}>
+                <h1>Open Chat</h1>
+                <input className='input' type="text" placeholder='Username' name='username' id='username' onChange={(e) => setUsername(e.target.value)}/>
+                <button type='submit' onClick={joinRoom}>LOGIN</button>
+            </form>
         </div>
     )
 }
