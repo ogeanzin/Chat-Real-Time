@@ -2,13 +2,13 @@
 
 Chat in real time using React, NodeJs and Socket.io.
 
-- [] FrontEnd
-   - [] Login
+- [ ] FrontEnd
+   - [ ] Login
       - [x] Style
-      - [] Form
-          - [] Auth (Zod)
+      - [ ] Form
+          - [ ] Auth (Zod)
           - [x] Button connection
-      - [] Chat
+      - [ ] Chat
 
-- [] BackEnd
+- [ ] BackEnd
 -   [x] Socket server
