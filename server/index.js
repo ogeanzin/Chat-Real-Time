@@ -16,9 +16,18 @@ const io = new Server(server, {
   });
 
 io.on('connection', (socket) => {
-    console.log(`User connected: ${socket.id}`)
+    console.log(`User connected: ${socket.id}`);
+
+    socket.on('message', (data) => {
+      console.log(data)
+      socket.emit('messageSending', data)
+    })
+
+    socket.on('disconnect', () => {
+      console.log(`User ${socket.id} disconnected`)
+    })
 })
 
 server.listen(3536, () => {
-    console.log('Server running on port 3536')
+    console.log('Server running on port 3536');
 })

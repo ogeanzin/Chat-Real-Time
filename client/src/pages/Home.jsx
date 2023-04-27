@@ -15,10 +15,10 @@ export const Home = () => {
 
     return (
         <div className="home-container">
-            <form action="" className='form' onSubmit={joinRoom}>
+            <form className='form' onSubmit={joinRoom}>
                 <h1>Open Chat</h1>
                 <input className='input' type="text" placeholder='Username' name='username' id='username' onChange={(e) => setUsername(e.target.value)}/>
-                <button type='submit' onClick={joinRoom}>LOGIN</button>
+                <button type='submit'>LOGIN</button>
             </form>
         </div>
     )
