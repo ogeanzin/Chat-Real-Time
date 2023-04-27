@@ -11,4 +11,4 @@ Chat in real time using React, NodeJs and Socket.io.
       - [ ] Chat
 
 - [ ] BackEnd
--   [x] Socket server
+   - [x] Socket server
