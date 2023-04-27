@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 import Home from './pages/Home';
 import Chat from './pages/Chat';
 
-import './App.css';
+import './styles/App.css';
 
 const socket = io('http://localhost:3536');
 socket.on('connection', () => {
