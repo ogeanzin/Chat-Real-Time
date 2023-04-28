@@ -32,10 +32,13 @@ const Login = () => {
                 
                 <input 
                     className='mb-8 w-80 bg-blueGreen text-white border-none p-2 cursor-pointer rounded-md h-12 shadow' 
-                    type="text" placeholder='Username' 
-                    name='username' id='username' 
+                    type="text" 
+                    placeholder='Username' 
+                    name='username' 
+                    id='username' 
                     value={user.username} 
                     onChange={handleUsername}
+                    required
                 />
             
                 <input 
@@ -45,12 +48,14 @@ const Login = () => {
                     name='password' 
                     id='password' 
                     value={user.password} 
-                    onChange={handlePassword}
+                    onChange={handlePassword} 
+                    required
                 />
-            
+
             <button 
                 type='submit' 
-                className='w-80 rounded-md h-12 flex items-center justify-center font-medium leading-4 duration-500 cursor-pointer border-none bg-green hover:bg-greenDark hover:text-white'>
+                className='w-80 rounded-md h-12 flex items-center justify-center font-medium leading-4 duration-500 cursor-pointer border-none bg-green hover:bg-greenDark hover:text-white'
+            >
                     LOGIN
             </button>
         </form>
