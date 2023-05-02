@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true,
   content: [
     './src/**/*.jsx',
   ],
@@ -11,6 +12,9 @@ module.exports = {
         white: '#FFF',
         green: '#20DF7F',
         greenDark: '#19B366',
+      },
+      fontSize:{
+        large: '48px',
       }
     },
   },

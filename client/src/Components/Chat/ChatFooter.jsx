@@ -19,7 +19,7 @@ const ChatFooter = (socket) => {
         <div> 
             <form 
                 onSubmit={handleMessage} 
-                className='w-full'
+                className='w-full flex items-center'
             >
                 <input 
                     type="text" 
@@ -27,9 +27,11 @@ const ChatFooter = (socket) => {
                     onChange={(e) => setMessages(e.target.value)} 
                     className='w-9/12 p-2'
                 />
-                <button>
-                    <SendIcon className='text-blueGreen ml-2 hover:text-blueGreenDark text-string'/>
-                </button>
+                
+                <button className='m-0'>
+                    <SendIcon className='text-blueGreen text-large ml-2 hover:text-blueGreenDark' />
+                </button>   
+               
             </form>
         </div>
     )
