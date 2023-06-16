@@ -1,6 +1,8 @@
 import React from 'react';
 
-import Login from '../components/Login'
+// Components
+import Login from '../Components/Login'
+
 export const Home = () => {
     
     return (

@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
+
+// Assets
 import SendIcon from '@mui/icons-material/Send';
 
 const ChatFooter = (socket) => {
     const [messages, setMessages] = useState('');
     console.log(socket)
+    
     function handleMessage(e) {
         e.preventDefault();
         
-        socket.emit('messages', {
+        console.log(socket)
+        socket.on('received_message', {
             text: messages,
             name: localStorage.getItem('user.username'),
             socketId: socket.id,
@@ -16,7 +20,7 @@ const ChatFooter = (socket) => {
     };
 
     return (
-        <div> 
+        <div className='w-full'> 
             <form 
                 onSubmit={handleMessage} 
                 className='w-full flex items-center'
@@ -25,7 +29,7 @@ const ChatFooter = (socket) => {
                     type="text" 
                     placeholder='Send Message...' 
                     onChange={(e) => setMessages(e.target.value)} 
-                    className='w-9/12 p-2'
+                    className='w-full p-2'
                 />
                 
                 <button className='m-0'>

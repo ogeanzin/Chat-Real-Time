@@ -56,7 +56,7 @@ const Login = () => {
                 type='submit' 
                 className='w-80 rounded-md h-12 flex items-center justify-center font-medium leading-4 duration-500 cursor-pointer border-none bg-green hover:bg-greenDark hover:text-white'
             >
-                    LOGIN
+                LOGIN
             </button>
         </form>
     )

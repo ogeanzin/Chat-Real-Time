@@ -9,9 +9,10 @@ Chat in real time using NodeJS, React, TailwindCSS and Socket.io.
           - [x] Button connection
           - [ ] Criar conta?
    - [ ] Chat
-      - [ ] Style
+      - [x] Footer
       - [ ] Clean Cache (React-Query) ?
       - [ ] Sending Messages
+      - [ ] Body
 
 - [ ] BackEnd
    - [x] Socket server

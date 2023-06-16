@@ -13,8 +13,11 @@ module.exports = {
         green: '#20DF7F',
         greenDark: '#19B366',
       },
-      fontSize:{
+      fontSize: {
         large: '48px',
+      },
+      height: {
+        chatBody: '400px',
       }
     },
   },
